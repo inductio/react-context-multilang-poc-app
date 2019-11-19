@@ -17,7 +17,7 @@ class LanguageSelector extends Component {
             <div>
                 <span>Select a language: </span>
                 {this.renderLangBtn('english', 'us')}
-                {this.renderLangBtn('українська', 'ua')}
+                {this.renderLangBtn('ukrainian', 'ua')}
             </div>
         )
     }
