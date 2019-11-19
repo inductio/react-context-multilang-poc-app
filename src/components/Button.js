@@ -3,8 +3,8 @@ import LanguageContext from '../context/LanguageContext';
 import ColorContext from "../context/ColorContext";
 
 class Button extends Component {
-    renderSubmit = (value) => {
-        return value === 'english' ? 'Submit' : 'Відправити'
+    renderSubmit = ({language}) => {
+        return language === 'english' ? 'Submit' : 'Відправити'
     };
 
     renderButton = (value) => {

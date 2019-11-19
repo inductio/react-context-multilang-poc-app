@@ -4,12 +4,14 @@ import LanguageContext from "../context/LanguageContext";
 class Field extends Component {
     static contextType = LanguageContext;
 
-    render() {
-        const text = this.context === 'english' ? 'Name' : 'Iм\'я';
+    renderName = ({language}) => {
+        return language === 'english' ? 'Name' : 'Iм\'я';
+    };
 
+    render() {
         return (
             <div className="ui field">
-                <label htmlFor="">{text}</label>
+                <label htmlFor="">{this.renderName(this.context)}</label>
                 <input type="text"/>
             </div>
         )
