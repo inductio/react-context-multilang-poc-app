@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import LanguageContext from '../context/LanguageContext';
 
 class LanguageSelector extends Component {
     static contextType = LanguageContext;
 
-    renderLangBtn = (lang, flag) => {
+    renderLangBtn = (lang, flagIconKey) => {
         return (
             <button className="ui button basic" onClick={() => this.context.onLanguageChange(lang)}>
-                <i className={`flag ${flag}`}/> <span>{lang}</span>
+                <i className={`flag ${flagIconKey}`}/> <span>{lang}</span>
             </button>
         )
     };

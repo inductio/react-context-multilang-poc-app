@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import LanguageContext from '../context/LanguageContext';
 import ColorContext from "../context/ColorContext";
 import { getLangText } from '../translations';
@@ -8,7 +8,7 @@ class Button extends Component {
         return (
             <button className={`ui button ${value}`}>
                 <LanguageContext.Consumer>
-                    {({language}) => getLangText(language, 'button')}
+                    { ({ language }) => getLangText(language, 'button') }
                 </LanguageContext.Consumer>
             </button>
         );
